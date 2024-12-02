@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <!-- Главный язык документа -->
+  <head>
+    <!-- Кодировку страницы необходимо указать для того, чтобы браузер корректно отобразил текст -->
+    <meta charset="UTF-8" />
+
+    <!-- Краткое описание содержания помогает поисковым системам лучше проиндексировать страницу -->
+    <meta name="description" content="Дизайн та розробка сайтів - Головна сторінка" />
+
+    <!-- -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Заголовок страницы, который отображается во вкладке браузера -->
+    <!-- Текст заголовка содержит краткое описание содержимого веб-страницы -->
+    <!-- Длина заголовка должна быть не более 60 символов, чтобы полностью поместиться в заголовке -->
+    <title>WebStudio</title>
+
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- подключается нормализатор стилей для всех браузеров - перед подключением остальных стилей -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+
+    <!-- Подключение внешнего файла со стилями -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="page">
+    <!-- Заголовок -->
+    <header class="page-header">
+      <div class="container">
+        <!-- Ссылка - На основную страничку сайта -->
+        <a href="./index.html" title="Перехід на основну сторінку" class="logo link"
+          ><span class="logo-blue">Web</span><span class="logo-black">Studio</span></a
+        >
+        <!-- Навигация - это ссылки на другие странички -->
+        <nav>
+          <ul class="nav-site list">
+            <li class="item">
+              <a href="./index.html" title="Основна сторінка" class="link current">Студія</a>
+            </li>
+            <li class="item">
+              <a href="./portfolio.html" title="Наші проекти" class="link">Портфоліо</a>
+            </li>
+            <li class="item"><a href="" title="Наші контакти" class="link">Контакти</a></li>
+          </ul>
+        </nav>
+        <ul class="nav-adress list">
+          <li class="item">
+            <a href="mailto:info@devstudio.com" title="Напиши" class="email link"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="item">
+            <a href="tel:+380961111111" title="Подзвони" class="tel link">+38 096 111 11 11</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <!-- Шапка -->
+      <section class="hero">
+        <h1 class="hero-title">Ефективні рішення для <br />вашого бізнесу</h1>
+        <button type="button" class="hero-button">Замовити послугу</button>
+      </section>
+
+      <!-- Наши Преимущества -->
+      <section class="section no-padding-bottom">
+        <div class="feature container">
+          <h2 class="feature section-title" aria-label="Особливості">Особливості</h2>
+          <ul class="feature-list list">
+            <li class="item antenna">
+              <h3 class="title">УВАГА ДО ДЕТАЛЕЙ</h3>
+              <p class="text">
+                Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
+              </p>
+            </li>
+            <li class="item clock">
+              <h3 class="title">ПУНКТУАЛЬНІСТЬ</h3>
+              <p class="text">
+                Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
+              </p>
+            </li>
+            <li class="item diagram">
+              <h3 class="title">ПЛАНУВАННЯ</h3>
+              <p class="text">Так само консультація з широким активом значною мірою зумовлює.</p>
+            </li>
+            <li class="item astronaut">
+              <h3 class="title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+              <p class="text">
+                Значимість цих проблем настільки очевидна, що реалізація планових завдань.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Чем мы занимаемся -->
+      <section class="section work">
+        <div class="container">
+          <h2 class="section-title">Чим ми займаємося</h2>
+          <ul class="work-list list">
+            <li class="work-list-item">
+              <a href=""
+                ><img
+                  src="./images/type-work-1.jpg"
+                  alt="Вид роботи 1"
+                  width="370"
+                  height="294"
+                  class="link"
+              /></a>
+            </li>
+            <li class="work-list-item">
+              <a href=""
+                ><img
+                  src="./images/type-work-2.jpg"
+                  alt="Вид роботи 2"
+                  width="370"
+                  height="294"
+                  class="link"
+              /></a>
+            </li>
+            <li class="work-list-item">
+              <a href=""
+                ><img
+                  src="./images/type-work-3.jpg"
+                  alt="Вид роботи 3"
+                  width="370"
+                  height="294"
+                  class="link"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Наша команда-->
+      <section class="section team">
+        <div class="container">
+          <h2 class="section-title">Наша команда</h2>
+          <ul class="team-list list">
+            <!-- team card 1 -->
+            <li class="team-list-item">
+              <img
+                src="./images/team-1.jpg"
+                alt="Фото Ігор Дем'яненко"
+                width="270"
+                height="260"
+                class="photo"
+              />
+              <h3 class="name">Ігор Дем'яненко</h3>
+              <p class="type-worker">Product Designer</p>
+            </li>
+            <!-- team card 2 -->
+            <li class="team-list-item">
+              <img
+                src="./images/team-2.jpg"
+                alt="Фото Ольга Рєпіна"
+                width="270"
+                height="260"
+                class="photo"
+              />
+              <h3 class="name">Ольга Рєпіна</h3>
+              <p class="type-worker">Frontend Developer</p>
+            </li>
+            <!-- team card 3 -->
+            <li class="team-list-item">
+              <img
+                src="./images/team-3.jpg"
+                alt="Фото Микола Тарасов"
+                width="270"
+                height="260"
+                class="photo"
+              />
+              <h3 class="name">Микола Тарасов</h3>
+              <p class="type-worker">Marketing</p>
+            </li>
+            <!-- team card 4 -->
+            <li class="team-list-item">
+              <img
+                src="./images/team-4.jpg"
+                alt="Фото Михайло Єрмаков"
+                width="270"
+                height="260"
+                class="photo"
+              />
+              <h3 class="name">Михайло Єрмаков</h3>
+              <p class="type-worker">UI Designer</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Клиенты -->
+      <section class="section client">
+        <div class="container">
+          <h2 class="section-title">Постійні клієнти</h2>
+          <ul class="client-list list">
+            <li class="client-list-item">
+              <div class="logo-rect">
+                <img src="./icon/client-1.svg" alt="Клієнт 1" class="logo-img" />
+              </div>
+            </li>
+            <li class="client-list-item">
+              <div class="logo-rect">
+                <img src="./icon/client-2.svg" alt="Клієнт 2" class="logo-img" />
+              </div>
+            </li>
+            <li class="client-list-item">
+              <div class="logo-rect">
+                <img src="./icon/client-3.svg" alt="Клієнт 3" class="logo-img" />
+              </div>
+            </li>
+            <li class="client-list-item">
+              <div class="logo-rect">
+                <img src="./icon/client-4.svg" alt="Клієнт 4" class="logo-img" />
+              </div>
+            </li>
+            <li class="client-list-item">
+              <div class="logo-rect">
+                <img src="./icon/client-5.svg" alt="Клієнт 5" class="logo-img" />
+              </div>
+            </li>
+            <li class="client-list-item">
+              <div class="logo-rect">
+                <img src="./icon/client-6.svg" alt="Клієнт 6" class="logo-img" />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- Футер - подвал сайта -->
+    <footer>
+      <div class="container">
+        <a href="./index.html" title="Перехід на основну сторінку" class="logo link"
+          ><span class="logo-blue">Web</span><span class="logo-white">Studio</span></a
+        >
+        <address>
+          <p class="description">м. Київ, пр-т Лесі Українки, 26</p>
+          <p>
+            <a href="mailto:info@devstudio.com" title="Напиши" class="email link"
+              >info@devstudio.com</a
+            >
+          </p>
+          <p><a href="tel:+380961111111" title="Подзвони" class="tel link">+38 096 111 11 11</a></p>
+        </address>
+      </div>
+    </footer>
+  </body>
+</html>
