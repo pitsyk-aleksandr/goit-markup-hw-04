@@ -147,6 +147,9 @@ body {
 
 /* Логотип - общие свойства */
 .logo {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   font-family: 'Raleway', sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -223,8 +226,8 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
+
 .nav-adress .link {
-  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -238,6 +241,15 @@ body {
   margin-left: 50px;
 }
 
+.nav-adress .icon {
+  fill: var(--stroke-client-color);
+  margin-right: 10px;
+}
+
+.nav-adress .link:hover .icon {
+  fill: var(--acsent-color);
+}
+
 /* При наведении мышки или при получении фокуса */
 .nav-adress .link:hover,
 .nav-adress .link:focus {
@@ -245,7 +257,7 @@ body {
 }
 
 /* Вставляем иконки через псевдоэлемент ::before */
-.email.link::before {
+/* .email.link::before {
   display: inline-flex;
   content: '';
   width: 16px;
@@ -254,11 +266,11 @@ body {
   background-image: url(../icon/envelope.svg);
   background-size: contain;
   background-position: center;
-}
+} */
 
 /* hero - Приветствие к кнопкой call-to-action */
 .hero {
-  /* Выравнивание бока по центру экрана */
+  /* Выравнивание блока по центру экрана */
   margin-left: auto;
   margin-right: auto;
   /* Внутренние отступы блока до текста и кнопки */
@@ -369,35 +381,44 @@ body {
 }
 
 /* Картинка для каждого преимущества - в .item::before */
-.feature-list .item::before {
-  content: '';
+/* .feature-list .item::before {
+  /* content: ''; */
+/* height: 120px; */
+/* Картинка на всю ширину блока */
+/* display: block; */
+/* background-color: var(--background-section-color); */
+/* background-position: center; */
+/* background-repeat: no-repeat; */
+/* background-size: 70px 70px; */
+/* margin-bottom: 30px; */
+/* } */
+
+/* Иконки для каждого преимущества */
+/* .feature-list .item.antenna::before { */
+/* background-image: url(../icon/antenna.svg); */
+/* } */
+
+/* При вставке иконки через Inline-SVG */
+.feature-item-icon {
+  display: flex;
   height: 120px;
-  /* Картинка на всю ширину блока */
-  display: block;
+  justify-content: center;
+  align-items: center;
+
   background-color: var(--background-section-color);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 70px 70px;
   margin-bottom: 30px;
 }
 
-/* Иконки для каждого преимущества */
-.feature-list .item.antenna::before {
-  background-image: url(../icon/antenna.svg);
+.feature .icon {
+  display: block;
+  margin: 0;
+  /* padding-top: 25px;
+  padding-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  background-color: var(--acsent-color); */
 }
-
-.feature-list .item.clock::before {
-  background-image: url(../icon/clock.svg);
-}
-
-.feature-list .item.diagram::before {
-  background-image: url(../icon/diagram.svg);
-}
-
-.feature-list .item.astronaut::before {
-  background-image: url(../icon/astronaut.svg);
-}
-
 /* Название преимущества */
 .feature-list .title {
   margin-bottom: 10px;
@@ -411,9 +432,9 @@ body {
 }
 
 /* Для всех четных элементов списка Преимущества */
-.feature-list > .item:nth-child(2n) {
-  background-color: var(--acsent-color);
-}
+/* .feature-list > .item:nth-child(2n) { */
+/* background-color: var(--acsent-color); */
+/* } */
 
 /* Описание преимущества */
 .feature-list .text {
@@ -476,6 +497,51 @@ body {
   letter-spacing: 0.03em;
 }
 
+.team-list-item .social-links {
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 30px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  width: 206px;
+  height: 44px;
+}
+
+.social-links > .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  border: 1px solid #ffffff;
+
+  cursor: pointer;
+
+  /* Убрать подчеркивание для ссылки */
+  text-decoration: none;
+}
+
+.social-links .icon {
+  display: block;
+  margin: 0;
+  fill: var(--stroke-client-color);
+}
+
+.social-links > .item:hover {
+  background-color: var(--acsent-color);
+}
+
+.social-links > .item:hover .icon {
+  fill: var(--main-white-color);
+}
+
 /* Клиенты */
 .client .client-list {
   display: flex;
@@ -485,37 +551,45 @@ body {
 }
 
 /* Блок логотипа с рамкой */
-.client-list-item {
+.client-list-item .client-link {
   width: 170px;
   height: 92px;
   border-color: var(--stroke-client-color);
   border-style: solid;
   border-width: 1px;
+  border-radius: 4px;
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 32px;
   padding-right: 32px;
-}
 
-/* Внутренний блок логотипа */
-.client-list-item .logo-rect {
-  /* Превращаем внутренний блок в ячейку таблицы, чтобы была возможность вертикального центрирования */
-  display: table-cell;
-  outline: red solid 1px;
-  width: 106px;
-  height: 60px;
-  /* Центрируем содержимое ячейки по вертикали */
-  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Картинка с логотипом */
-.logo-img {
+.client-svg {
+  max-height: 47px;
+  max-width: 94px;
   outline: #2196f3 solid 1px;
   /* Делаем блочный элемент,чтобы убрать стандартный отступ снизу картинки*/
   display: block;
-  /* Внешними отступами центрируем по горизонтали */
-  margin-left: auto;
-  margin-right: auto;
+  fill: #afb1b8;
+}
+
+/* При нажатии на иконку с логотипом клиента */
+.client-list-item .client-link:hover {
+  border-color: var(--acsent-color);
+}
+
+/* Для полностью встроенного SVG (на примере Клиент 1) */
+/* .client-svg:hover .path {
+  fill: var(--acsent-color);
+} */
+
+.client-svg:hover {
+  fill: var(--acsent-color);
 }
 
 /* Portfolio */
@@ -701,4 +775,9 @@ address .tel {
 address .tel:hover,
 address .tel:focus {
   color: var(--acsent-color);
+}
+
+.social .title {
+  margin-bottom: 20px;
+  color: var(--main-white-color);
 }
