@@ -330,8 +330,9 @@ body {
   letter-spacing: 0.06em;
 }
 
-.hero-button:hover {
-  /* Вид курсора при наведении на кнопку */
+.hero-button:hover,
+.hero-button:focus {
+  /* Вид курсора при наведении на кнопку либо при фокусе с клавиатуры */
   cursor: pointer;
 }
 
@@ -512,7 +513,7 @@ body {
   height: 44px;
 }
 
-.social-links > .item {
+.social-links > .item > .link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -520,7 +521,7 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 22px;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--main-white-color);
 
   cursor: pointer;
 
@@ -534,11 +535,13 @@ body {
   fill: var(--stroke-client-color);
 }
 
-.social-links > .item:hover {
+.social-links > .item > .link:hover,
+.social-links > .item > .link:focus {
   background-color: var(--acsent-color);
 }
 
-.social-links > .item:hover .icon {
+.social-links > .item > .link:hover .icon,
+.social-links > .item > .link:focus .icon {
   fill: var(--main-white-color);
 }
 
@@ -570,16 +573,19 @@ body {
 
 /* Картинка с логотипом */
 .client-svg {
-  max-height: 47px;
-  max-width: 94px;
-  outline: #2196f3 solid 1px;
+  /* Все размеры иконок заданы в теге SVG в HTML-файле */
+  /* max-height: 47px; */
+  /* max-width: 94px; */
+  /* Рамка для отслеживания размера иконки */
+  /* outline: #2196f3 solid 1px; */
   /* Делаем блочный элемент,чтобы убрать стандартный отступ снизу картинки*/
   display: block;
-  fill: #afb1b8;
+  fill: var(--stroke-client-color);
 }
 
 /* При нажатии на иконку с логотипом клиента */
-.client-list-item .client-link:hover {
+.client-list-item .client-link:hover,
+.client-list-item .client-link:focus {
   border-color: var(--acsent-color);
 }
 
@@ -588,7 +594,8 @@ body {
   fill: var(--acsent-color);
 } */
 
-.client-svg:hover {
+.client-list-item .client-link:hover .client-svg,
+.client-list-item .client-link:focus .client-svg {
   fill: var(--acsent-color);
 }
 
@@ -642,7 +649,8 @@ body {
   letter-spacing: 0.03em;
 }
 
-.filter-button:hover {
+.filter-button:hover,
+.filter-button:focus {
   /* Вид курсора при наведении на кнопку */
   cursor: pointer;
 
@@ -676,7 +684,8 @@ body {
   gap: 30px;
 }
 
-.project-item:hover {
+.project-link:hover,
+.project-link:focus {
   /* Многослойная тень при наведении на проект */
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.06),
     1px 4px 6px 0px rgba(0, 0, 0, 0.16);
