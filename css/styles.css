@@ -1,0 +1,477 @@
+/* Main styles */
+
+/* Глобальні стилі */
+
+/* :root { */
+  /* Шрифти */
+  /* --font-family: 'Roboto', sans-serif; */
+  /* --second-family: 'Raleway', sans-serif; */
+
+  /* Кольори */
+  /* --iris: #4d5ae5; */
+  /* --ocean: #404bbf; */
+  /* --navy-blue: #2e2f42; */
+  /* --green: #31d0aa; */
+  /* --slate: #434455; */
+  /* --light-slate: #8e8f99; */
+  /* --cornflower: #e7e9fc; */
+  /* --cloud: #f4f4fd; */
+  /* --navy-blue-modal: rgba(46, 47, 66, 0.4); */
+  /* --grey: rgba(46, 47, 66, 0.7); */
+  /* --white: #fff; */
+  /* --dairy: #fcfcfc; */
+/* } */
+
+
+*,
+*::before,
+*::after {
+  /* Включаємо content, padding, border = в склад блоку */
+  box-sizing: border-box;
+}
+
+/* Глобальне скидання стилів */
+h1, h2, h3, h4, h5, h6, p {
+  /* Скидання дефолтних відступів */
+	margin: 0;
+}
+
+ul, ol {
+    /* Скидання дефолтних відступів та лівого паддінгу*/
+	margin: 0;
+	padding-left: 0;
+    /* Скидання дефолтних маркерів для списків */
+  list-style-type: none;
+}
+
+a {
+  /* Скидання дефолтного підкреслення для посилань */
+  text-decoration: none;
+}
+
+img {
+  /* Прибираємо нижній проміжок картинок для всього проєкту */
+	display: block;
+  /* Для того, щоб зображення, для якого явно не задано ширину, 
+  автоматично підлаштовувалося під ширину батьківського елемента */
+  max-width: 100%;
+}
+
+
+
+/* Стилі сторінки */
+
+body {
+  /* Скидання дефолтних відступів */
+	margin: 0;
+  
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  /* Інтерліньяж - міжрядковий інтервал */
+  line-height: 1.5;
+  /* Шнтервал між символами */
+  letter-spacing: 0.02em;
+  /* Колір основного тексту - стиль  slate  */
+  color: #434455;
+  background-color: #ffffff;
+}
+
+/* Правила стилів для контейнера (header, footer + кожна секція = контейнер) */
+.container { 
+  width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;  
+}
+
+/* Стилі для всіх секцій */
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+
+/* Хедер сторінки - page-header */
+
+/* Нижняя полоса в один пиксель в .page-header */
+.page-header {
+  /* Внутрішні вертикальні відступи - 24px */
+  padding: 24px 0;
+  /* Колір - стиль cornflower */
+  border-bottom: 1px solid #e7e9fc ;
+}
+
+
+/* Flax-container хедера */
+.page-header .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Клас для всього логотипу */
+.logo {
+  margin-right: 76px;
+  /* Перевід тексту в верхній регістр */
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+   /* Колір тексту - стиль  iris  */
+  color: #4d5ae5;
+}
+
+/* Клас для другої частини логотипу в хедері */
+.page-header .logo-end {
+  /* Колір тексту - стиль  navy-blue  */
+  color: #2e2f42;
+}
+
+/* Клас для другої частини логотипу в футері */
+.page-footer .logo-end {
+  /* Колір  - стиль  cloud  */
+  color: #f4f4fd;
+}
+
+/* Flex-container навігації */
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Flax-container основного меню */
+.main-menu {
+
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.menu-link {
+  /* Внутрішні вертикальні відступи - 24px */
+  padding: 24px 0;
+
+  font-weight: 500;
+  /* Колір тексту  - стиль  navy-blue  */
+  color: #2e2f42;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  /* Колір тексту - стиль  ocean  */
+  color: #404bbf;
+}
+
+
+.address {
+    /* Скидаємо дефолтне значення для стилю - курсив */
+  font-style: normal;
+}
+
+/* Flax-container пунктів адреси */
+.address-list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.address-link {
+  font-weight: 400;
+  font-size: 16px;
+  /* Колір тексту посилань - стиль  slate  */
+  color: #434455;
+}
+
+.address-link:hover,
+.address-link:focus {
+  /* Колір - стиль  ocean  */
+  color: #404bbf;
+}
+
+
+/* Cекція  hero  */
+.hero {
+  /* Внутрішні вертикальні відступи */
+  padding: 188px 0;
+  /* Колір - стиль  navy-blue  */
+  background-color: #2e2f42;
+
+  /* Колір - стиль grey (фон над картинкою) */
+  /* --grey: rgba(46, 47, 66, 0.7); */
+  /* background-color: rgba(46, 47, 66, 0.7); */
+
+  /* Фон : градієнт над картинкою */
+  /* background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(); */
+
+  /* Повторення у фоні фонової картинки */
+  /* background-repeat: no-repeat; */
+
+  /* Позиціонування фонової картинки по X та Y */
+  /* background-position: center; */
+
+  /* Зміна розміру фонового зображення : cover - Максимально вмістити в блок */
+  /* background-size: cover; */
+  
+}
+
+/* Заголовок */
+.hero-title {
+  max-width: 496px;
+  margin: 0 auto;
+  /* Текст - стиль Header 1 */
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  text-align: center;
+  /* Колір - стиль  white  */
+  color: #ffffff;
+}
+
+/* Кнопка */
+.hero-button {
+  display: block;
+
+  /* Відcтуп від тексту */
+  margin-top: 48px;
+
+  /* Вирівнювання кнопки по центру  */
+  margin-left: auto ;
+  margin-right: auto;
+
+  /* Внутрішні відступи (вертикальні - горизонтальні) */
+  padding: 16px 32px;
+
+  min-width: 169px;
+  height: 56px;
+  border: none;
+
+  /* Радіус кнопки */
+  border-radius: 4px;
+
+  /* Тінь кнопки */
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15) ;
+
+  /* Шрифт тексту кнопки */
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5 ;
+  letter-spacing: 0.04em;
+
+  /* Колір тексту  - стиль  white  */
+  color: #ffffff;
+  /* Колір - стиль  iris  */
+  background-color: #4d5ae5;
+
+  /* Тип курсора */
+  cursor: pointer;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  /* Колір - стиль  ocean  */
+  background-color: #404bbf;
+}
+
+
+/* Заголовки секцій - клас Header 2 */
+.section-title {
+  /* Визначення стилю написання тексту */
+  text-transform: capitalize;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  /* Колір - стиль  navy-blue  */
+  color: #2e2f42;
+}
+
+
+/* Секція  Features  */
+
+/* ======================================================================= */
+/* Для приховування заголовка другої секції використовується патерн – visually-hidden: */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* ======================================================================= */
+
+
+/* Flex-container для списку переваг */
+.feature-list {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+/* Flex-container для однієї переваги */
+.feature-item {
+  flex-basis: calc((100% - 3 * 24px) / 4);
+}
+
+/* Підзаголовки секцій */
+.feature-title {
+  margin-bottom: 8px;
+  /* Текстовий стиль - Header 3 */
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  /* Колір  - стиль  navy-blue  */
+  color: #2e2f42;
+}
+
+/* .feature-text {} */
+
+.section.team {
+  /* Колір  - стиль  cloud  */
+  background-color: #f4f4fd;
+}
+
+
+
+/* Секція  Our Team  */
+
+.team .section-title {
+  /* Вертикальний відступ від заголовка секції */
+  margin-bottom: 72px;
+}
+
+
+.card-list { 
+  /* Flex-container для карток робітників */
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+
+}
+
+/* Картка робітника */
+.card-item {
+  /* display: flex; */
+  /* flex-direction: column; */
+
+  /* Розрахунок ширини блоку */
+  flex-basis: calc((100%-72px)/4);
+  
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px ;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius:4px;
+
+  /* Колір - стиль  white  */
+  background-color: #ffffff;
+}
+
+/* .card-img {} */
+
+/* Інформація щодо робітника */
+.card-content {
+  padding: 32px 0;
+}
+
+.card-name {
+  margin-bottom: 8px;
+  /* Текстовий стиль - Header 3 */
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: center;
+  /* Колір - стиль  navy-blue  */
+  color: #2e2f42;
+}
+
+.card-position {
+  text-align: center;
+}
+
+
+/* Секція  Our Portfolio - Projects */
+
+.projects .section-title {
+  /* Вертикальний відступ від заголовка секції */
+  margin-bottom: 72px;
+}
+
+.project-list {
+
+  /* Flex-container для карток проєктів */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+
+}
+
+.project-item {
+
+  /* Розрахунок ширини блоку */
+  /* width: 360px; */
+  flex-basis: calc((100% - 48px) / 3);
+}
+
+/* .project-img {} */
+
+/* Інформація щодо проєкту */
+.project-content {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none; 
+}
+
+.project-title {
+  margin-bottom: 8px;
+  /* Текстовий стиль - Header 3 */
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  /* text-align: center; */
+  /* Колір - стиль  navy-blue  */
+  color: #2e2f42;
+}
+
+/* .project-type {} */
+
+/* Футер сторінки - page-footer */
+.page-footer {
+  padding: 100px 0;
+  /* Колір   - стиль  navy-blue  */
+  background-color: #2e2f42;
+}
+
+
+.page-footer .logo {
+  display: inline-block;
+  margin-bottom: 16px; 
+}
+
+/* Клас для другої частини логотипу в хедері */
+.page-footer .logo-end {
+  /* Колір   - стиль  cloud  */
+  color: #f4f4fd;
+}
+
+.text-footer {
+  max-width: 264px;
+  /* Колір   - стиль  cloud  */
+  color: #f4f4fd;
+}
+
