@@ -2,25 +2,26 @@
 
 /* Глобальні стилі */
 
-/* :root { */
+/* Змінні - variables */
+:root {
   /* Шрифти */
-  /* --font-family: 'Roboto', sans-serif; */
-  /* --second-family: 'Raleway', sans-serif; */
+  --font-family: 'Roboto', sans-serif;
+  --second-family: 'Raleway', sans-serif;
 
   /* Кольори */
-  /* --iris: #4d5ae5; */
-  /* --ocean: #404bbf; */
-  /* --navy-blue: #2e2f42; */
-  /* --green: #31d0aa; */
-  /* --slate: #434455; */
-  /* --light-slate: #8e8f99; */
-  /* --cornflower: #e7e9fc; */
-  /* --cloud: #f4f4fd; */
-  /* --navy-blue-modal: rgba(46, 47, 66, 0.4); */
-  /* --grey: rgba(46, 47, 66, 0.7); */
-  /* --white: #fff; */
-  /* --dairy: #fcfcfc; */
-/* } */
+  --iris: #4d5ae5;
+  --ocean: #404bbf;
+  --navy-blue: #2e2f42;
+  --green: #31d0aa;
+  --slate: #434455;
+  --light-slate: #8e8f99;
+  --cornflower: #e7e9fc;
+  --cloud: #f4f4fd;
+  --navy-blue-modal: rgba(46, 47, 66, 0.4);
+  --grey: rgba(46, 47, 66, 0.7);
+  --white: #fff;
+  --dairy: #fcfcfc;
+}
 
 
 *,
@@ -71,9 +72,10 @@ body {
   line-height: 1.5;
   /* Шнтервал між символами */
   letter-spacing: 0.02em;
-  /* Колір основного тексту - стиль  slate  */
-  color: #434455;
-  background-color: #ffffff;
+  /* Колір - стиль  --slate - #434455 */
+  color: var(--slate);
+  /* Колір - стил   --white: #fff; */
+  background-color: var(--white);
 }
 
 /* Правила стилів для контейнера (header, footer + кожна секція = контейнер) */
@@ -96,8 +98,12 @@ body {
 .page-header {
   /* Внутрішні вертикальні відступи - 24px */
   padding: 24px 0;
-  /* Колір - стиль cornflower */
-  border-bottom: 1px solid #e7e9fc ;
+  /* Колір - стиль --cornflower: #e7e9fc */
+  border-bottom: 1px solid var(--cornflower) ;
+  /* Тінь */
+  box-shadow:  2px 1px rgba(46, 47, 66, 0.08), 
+  0px 1px 1px rgba(46, 47, 66, 0.16), 
+  0px 1px 6px rgba(46, 47, 66, 0.08); 
 }
 
 
@@ -121,20 +127,20 @@ body {
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-   /* Колір тексту - стиль  iris  */
-  color: #4d5ae5;
+   /* Колір тексту - стиль  --iris: #4d5ae5  */
+  color: var(--iris);
 }
 
 /* Клас для другої частини логотипу в хедері */
 .page-header .logo-end {
-  /* Колір тексту - стиль  navy-blue  */
-  color: #2e2f42;
+  /* Колір тексту - стиль  --navy-blue: #2e2f42  */
+  color: var(--navy-blue);
 }
 
 /* Клас для другої частини логотипу в футері */
 .page-footer .logo-end {
-  /* Колір  - стиль  cloud  */
-  color: #f4f4fd;
+  /* Колір  - стиль  --cloud: #f4f4fd  */
+  color: var(--cloud);
 }
 
 /* Flex-container навігації */
@@ -158,8 +164,8 @@ body {
   /* Внутрішні вертикальні відступи - 24px */
   padding: 24px 0;
   font-weight: 500;
-  /* Колір тексту  - стиль  navy-blue  */
-  color: #2e2f42;
+  /* Колір тексту  - стиль  --navy-blue: #2e2f42  */
+  color: var(--navy-blue);
     /* Параметри переходу */
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -167,8 +173,8 @@ body {
 .menu-link.current {
   /* Для абсолютного позиціювання підкреслення текущего пункта меню */
   position: relative;
-  /* Колір тексту - стиль  ocean  */
-  color: #404bbf;
+  /* Колір тексту - стиль  --ocean: #404bbf  */
+  color: var(--ocean);
 }
 
 /* Подчеркивание пункта меню c названием текущей страницы*/
@@ -179,7 +185,7 @@ body {
   content: '';
   /* Позиционирование прямоугольничка вниз пункта меню */
   left: 0;
-  bottom: -2px;
+  bottom: -1px;
   /* Делаем прямоугольный блок */
   display: block;
   /* Ширина блока - 100% ширины  .menu-link.current */
@@ -190,7 +196,7 @@ body {
   border-radius: 2px;
   /* Цвет фона */
    /* Колір стиль --ocean: #404bbf; */
-  background-color: #404bbf;
+  background-color: var(--ocean);
   /* В обычном состоянии - НЕ прозрачная */
   opacity: 1;
 }
@@ -198,8 +204,8 @@ body {
 
 .menu-link:hover,
 .menu-link:focus {
-  /* Колір тексту - стиль  ocean  */
-  color: #404bbf;
+  /* Колір тексту --ocean: #404bbf; */
+  color: var(--ocean);
 }
 
 
@@ -218,16 +224,16 @@ body {
 .address-link {
   font-weight: 400;
   font-size: 16px;
-  /* Колір тексту посилань - стиль  slate  */
-  color: #434455;
+  /* Колір тексту посилань - стиль  --slate: #434455  */
+  color: var(--slate);
     /* Параметри переходу */
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover,
 .address-link:focus {
-  /* Колір - стиль  ocean  */
-  color: #404bbf;
+  /* Колір - стиль  --ocean: #404bbf  */
+  color: var(--ocean);
 }
 
 
@@ -235,12 +241,12 @@ body {
 .hero {
   /* Внутрішні вертикальні відступи */
   padding: 188px 0;
-  /* Колір - стиль  navy-blue  */
-  background-color: #2e2f42;
+  /* Колір - стиль  --navy-blue: #2e2f42  */
+  background-color: var(--navy-blue);
   /* Колір - стиль grey (фон над картинкою) */
   /* --grey: rgba(46, 47, 66, 0.7); */
   /* Фон : градієнт над картинкою */
-  background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url('../images/people-office.jpg');
+  background-image: linear-gradient(to bottom, var(--grey), var(--grey)), url('../images/people-office.jpg');
   /* Повторення у фоні фонової картинки */
   background-repeat: no-repeat;
   /* Позиціонування фонової картинки по X та Y */
@@ -256,7 +262,9 @@ body {
 
 /* Заголовок */
 .hero-title {
+  /* Максимальна ширина тексту */
   max-width: 496px;
+  /* Вирівнювання по центру */
   margin: 0 auto;
   /* Текст - стиль Header 1 */
   font-weight: 700;
@@ -264,8 +272,8 @@ body {
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
-  /* Колір - стиль  white  */
-  color: #ffffff;
+  /* Колір - стиль  --white: #ffffff  */
+  color: var(--white);
 }
 
 /* Кнопка */
@@ -298,10 +306,10 @@ body {
   line-height: 1.5 ;
   letter-spacing: 0.04em;
 
-  /* Колір тексту  - стиль  white  */
-  color: #ffffff;
-  /* Колір - стиль  iris  */
-  background-color: #4d5ae5;
+  /* Колір тексту  - стиль  --white: #ffffff */
+  color: var(--white);
+  /* Колір - стиль  --iris: #4d5ae5  */
+  background-color: var(--iris);
 
   /* Тип курсора */
   cursor: pointer;
@@ -312,8 +320,8 @@ body {
 
 .hero-button:hover,
 .hero-button:focus {
-  /* Колір - стиль  ocean  */
-  background-color: #404bbf;
+  /* Колір - стиль  --ocean: #404bbf  */
+  background-color: var(--ocean);
 }
 
 
@@ -327,8 +335,8 @@ body {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
-  /* Колір - стиль  navy-blue  */
-  color: #2e2f42;
+  /* Колір - стиль  --navy-blue: #2e2f42  */
+  color: var(--navy-blue);
 }
 
 
@@ -358,18 +366,24 @@ body {
   gap: 24px;
 }
 
-/* Flex-container для однієї переваги */
+/* Блок для однієї переваги */
 .feature-item {
+  /* Розрахунок ширини блоку */
   flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
 /* Прямокутний Блок з іконкою */
 .feature-icon {
-  padding: 24px 0;
-  /* Колір стиль cloud: #f4f4fd; */
-  background-color: #f4f4fd;
-  /* Колір стиль light-slate: #8e8f99; */
-  border: 1px solid #8e8f99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
+  margin-bottom: 8px;
+
+  /* Колір стиль --cloud: #f4f4fd; */
+  background-color: var(--cloud);
+  /* Колір стиль --light-slate: #8e8f99; */
+  border: 1px solid var(--light-slate);
   border-radius: 4px;
 }
 
@@ -388,15 +402,15 @@ body {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  /* Колір  - стиль  navy-blue  */
-  color: #2e2f42;
+  /* Колір  - стиль  --navy-blue: #2e2f42  */
+  color: var(--navy-blue);
 }
 
 /* .feature-text {} */
 
 .section.team {
-  /* Колір  - стиль  cloud  */
-  background-color: #f4f4fd;
+  /* Колір  - стиль  --cloud: #f4f4fd  */
+  background-color: var(--cloud);
 }
 
 
@@ -431,8 +445,8 @@ body {
   border-bottom-right-radius: 4px;
   border-bottom-left-radius:4px;
 
-  /* Колір - стиль  white  */
-  background-color: #ffffff;
+  /* Колір - стиль  --white: #ffffff  */
+  background-color: var(--white);
 
   /* Тінь */
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 
@@ -444,7 +458,7 @@ body {
 
 /* Інформація щодо робітника */
 .card-content {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 
 .card-name {
@@ -455,8 +469,8 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-align: center;
-  /* Колір - стиль  navy-blue  */
-  color: #2e2f42;
+  /* Колір - стиль  --navy-blue: #2e2f42  */
+  color: var(--navy-blue);
 }
 
 .card-position {
@@ -468,26 +482,32 @@ body {
 .team .social-list {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 24px;
 }
 
 /* Посилання */
-/* .social-item {} */
-
-.team .social-item .link {
-  /* Перетворюємо посилання в блочний елемент */
-  display: block;
-  /* Внутрішні відступи - для центрування іконки */
-  padding: 12px;
-
+.social-item {
   /* Ширина та висота блока з посиланням та іконкою */
   width: 40px;
   height: 40px;
+}
+
+.team .social-item .link {
+  /* Перетворюємо посилання в flex */
+  display: flex;
+  /* для центрування іконки */
+  justify-content: center;
+  align-items: center;
+
+  /* Ширина та висота блока з посиланням та іконкою */
+  width: 100%;
+  height: 100%;
 
   /* Радіус - щоб блок був колом */
   border-radius: 50%;
   /* Колір стиль  --iris: #4d5ae5; */
-  background-color: #4d5ae5;
+  background-color: var(--iris);
 
   /* Параметри переходу */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -496,14 +516,14 @@ body {
 .team .social-item .link:hover,
 .team .social-item .link:focus {
   /* Колір стиль  --ocean: #404bbf; */ 
-  background-color: #404bbf;
+  background-color: var(--ocean);
 }
 
 
 .team .social-item .icon {
   display: block;
   /*   Колір стиль --cloud: #f4f4fd; */ 
-  fill: #f4f4fd;
+  fill: var(--cloud);
 }
 
 
@@ -533,8 +553,7 @@ body {
   /* width: 360px; */
   flex-basis: calc((100% - 48px) / 3);
   /* Параметри переходу */
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  ;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -545,7 +564,7 @@ body {
   overflow: hidden;
 }
 
-/* Сам блок overlay з текстом */
+/* Сам блок overlay = параграф з текстом */
 .project-overlay {
   /* Абсолютне позиціювання  */
   position: absolute;
@@ -557,12 +576,18 @@ body {
   width: 100%;
   height: 100%;
 
+  font-size: 16px;
+  line-height: 1.5; 
+  letter-spacing: 0.02em;
+
   /* Колір стиль --iris: #4d5ae5; */
-  background-color: #4d5ae5;
+  background-color: var(--iris);
   /* Колір стиль --cloud: #f4f4fd; */
-  color: #f4f4fd;
+  color: var(--cloud);
+
   /* Внутрішні відступи (до абзацу з текстом) */
   padding: 40px 32px;
+
   /* Переміщуємо весь overlay вниз на вю висоту */
   transform: translateY(100%);
     /* Параметри переходу */
@@ -591,7 +616,8 @@ body {
 /* Інформація щодо проєкту */
 .project-content {
   padding: 32px 16px;
-  border: 1px solid #e7e9fc;
+  /*Колір стиль  --cornflower: #e7e9fc; */
+  border: 1px solid var(--cornflower);
   border-top: none; 
 }
 
@@ -604,8 +630,8 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   /* text-align: center; */
-  /* Колір - стиль  navy-blue  */
-  color: #2e2f42;
+  /* Колір - стиль  --navy-blue: #2e2f42 */
+  color: var(--navy-blue);
 }
 
 /* .project-type {} */
@@ -613,16 +639,20 @@ body {
 /* Футер сторінки - page-footer */
 .page-footer {
   padding: 100px 0;
-  /* Колір   - стиль  navy-blue  */
-  background-color: #2e2f42;
+  /* Колір - стиль  --navy-blue: #2e2f42 */
+  background-color: var(--navy-blue);
 }
 
 .page-footer .container{
   display: flex;
   flex-direction: row;
   gap: 120px;
+  align-items: baseline;
 }
 
+.page-footer .left {
+  margin-right: 120px;
+}
 
 .page-footer .logo {
   display: inline-block;
@@ -631,14 +661,14 @@ body {
 
 /* Клас для другої частини логотипу в хедері */
 .page-footer .logo-end {
-  /* Колір   - стиль  cloud  */
-  color: #f4f4fd;
+  /* Колір стиль  --cloud: #f4f4fd */
+  color: var(--cloud);
 }
 
 .text-footer {
   max-width: 264px;
-  /* Колір   - стиль  cloud  */
-  color: #f4f4fd;
+  /* Колір стиль  --cloud: #f4f4fd */
+  color: var(--cloud);
 }
 
 /* Блок з назвою та посиланнями на соцыальны мережs */
@@ -649,12 +679,13 @@ body {
 }
 
 .page-footer .social .text {
-  /* Колір стиль --white: #fff; */
+  margin-bottom: 16px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #fff;
+  /* Колір стиль --white: #fff; */
+  color: var(--white);
 }
 
 
@@ -663,26 +694,33 @@ body {
 .page-footer .social-list {
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
 
 /* Посилання */
-/* .social-item {} */
-
-.page-footer .social-item .link {
-  /* Перетворюємо посилання в блочний елемент */
-  display: block;
-  /* Внутрішні відступи - для центрування іконки */
-  padding: 8px;
-
+.social-item {
   /* Ширина та висота блока з посиланням та іконкою */
   width: 40px;
   height: 40px;
+}
+
+.page-footer .social-item .link {
+  /* Перетворюємо посилання в flex */
+  display: flex;
+  /*  для центрування іконки */
+  justify-content: center;
+  align-items: center;
+
+  /* Ширина та висота посилання = розміру блока  */
+  width: 100%;
+  height: 100%;
 
   /* Радіус - щоб блок був колом */
   border-radius: 50%;
   /* Колір стиль  --iris: #4d5ae5; */
-  background-color: #4d5ae5;
+  background-color: var(--iris);
 
   /* Параметри переходу */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -691,12 +729,12 @@ body {
 .page-footer .social-item .link:hover,
 .page-footer .social-item .link:focus {
   /* Колір стиль    /* --green: #31d0aa; */ 
-  background-color: #31d0aa;
+  background-color: var(--green);
 }
 
 
 .page-footer .social-item .icon {
   display: block;
   /*   Колір стиль --cloud: #f4f4fd; */ 
-  fill: #f4f4fd;
+  fill: var(--cloud);
 }
